@@ -11,13 +11,11 @@
 
     <TextView
         android:id="@+id/tvContent"
-        android:layout_width="339dp"
+        android:layout_width="wrap_content"
         android:layout_height="64dp"
         android:layout_gravity="center"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="6dp"
         android:fontFamily="cursive"
-        android:text="@string/header"
+        android:text="@string/editsong"
         android:textColor="#E91E63"
         android:textSize="45sp"
         android:textStyle="bold" />
@@ -32,8 +30,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="282dp"
+        android:layout_height="333dp"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            android:textColor="#E91E63"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="2"
+            android:inputType="number"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/title"
@@ -94,58 +110,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rating"
-            android:textColor="#E91E63"
+            android:textColor="#C689C6"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:orientation="horizontal">
-
-        <RadioGroup
-            android:id="@+id/rGButton"
+        <RatingBar
+            android:id="@+id/ratingBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="1" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="2" />
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="4" />
-
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="5" />
-        </RadioGroup>
+            android:layout_height="43dp"
+            android:numStars="5" />
     </LinearLayout>
 
     <LinearLayout
@@ -154,31 +127,30 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnInsert"
+            android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="@string/insert"
+            android:text="@string/update"
             app:backgroundTint="#E91E63" />
 
         <Button
-            android:id="@+id/btnList"
+            android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="@string/list"
+            android:text="@string/delete"
             app:backgroundTint="#E91E63" />
     </LinearLayout>
 
-    <View
-        android:id="@+id/view2"
+    <Button
+        android:id="@+id/btnCancel"
         android:layout_width="match_parent"
-        android:layout_height="9dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="13dp"
-        android:background="#E91E63" />
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:backgroundTint="#E91E63" />
 
 
 </LinearLayout>
